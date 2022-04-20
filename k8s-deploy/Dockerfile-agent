@@ -20,4 +20,4 @@ RUN apk add --no-cache ca-certificates  tzdata bash \
 WORKDIR /app
 EXPOSE 5921
 
-ENTRYPOINT ["/app/gocron-node", "-allow-root", "-P"]
+ENTRYPOINT ["/app/gocron-node", "-allow-root", "-s", "0.0.0.0:5921"]
