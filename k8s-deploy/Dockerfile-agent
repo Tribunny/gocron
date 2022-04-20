@@ -15,10 +15,7 @@ RUN apk add --no-cache ca-certificates  tzdata bash \
     && apk add --no-cache procps unzip curl bash tzdata \
     && apk add python3 \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone \
-    && python -m pip install --upgrade pip \
-    && hash -d pip \
-    && python -m pip install requests
+    && echo "Asia/Shanghai" > /etc/timezone
 
 WORKDIR /app
 EXPOSE 5921
