@@ -30,7 +30,7 @@ COPY --from=builder /app/gocron/bin/gocron .
 
 RUN chown -R app:app ./
 
-EXPOSE 5920
+EXPOSE 80
 
 USER app
 
