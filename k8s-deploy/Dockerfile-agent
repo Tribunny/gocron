@@ -13,8 +13,8 @@ RUN apk add --no-cache ca-certificates  tzdata bash \
     && echo "http://mirrors.aliyun.com/alpine/v3.6/community" >> /etc/apk/repositories \
     && apk update upgrade \
     && apk add --no-cache procps unzip curl bash tzdata \
-	&& apk add python3\
-    && pip install requests
+    && apk add python3 \
+    && pip install requests \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone
 
