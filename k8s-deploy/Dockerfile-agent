@@ -16,12 +16,11 @@ RUN apk add --no-cache ca-certificates  tzdata bash \
     && apk add python3 \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone
-
-CMD pip install --upgrade pip \
+    && python -m pip install --upgrade pip \
     && hash -d pip \
-    && pip install requests \
+    && python -m pip install requests \
 
 WORKDIR /app
-EXPOSE 5922
+EXPOSE 5921
 
-ENTRYPOINT ["/app/gocron-node", "-allow-root"]
+ENTRYPOINT ["/app/gocron-node", "-allow-root", "-P"]
