@@ -22,6 +22,6 @@ CMD pip install --upgrade pip \
     && pip install requests \
 
 WORKDIR /app
-EXPOSE 5923
+EXPOSE 5922
 
 ENTRYPOINT ["/app/gocron-node", "-allow-root"]
