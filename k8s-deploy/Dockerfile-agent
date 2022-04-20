@@ -16,7 +16,7 @@ RUN apk add --no-cache ca-certificates  tzdata bash \
     && apk add python3 \
     && pip install --upgrade pip \
     && hash -d pip \
-    && pip install requests
+    && pip install requests \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone
 
