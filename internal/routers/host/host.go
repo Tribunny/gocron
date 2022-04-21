@@ -96,9 +96,9 @@ func Store(ctx *macaron.Context, form HostForm) string {
 	if err != nil {
 		return json.CommonFailure("操作失败", err)
 	}
-	if nameExist {
-		return json.CommonFailure("主机名已存在")
-	}
+// 	if nameExist {
+// 		return json.CommonFailure("主机名已存在")
+// 	}
 
 	hostModel.Name = strings.TrimSpace(form.Name)
 	hostModel.Alias = strings.TrimSpace(form.Alias)
