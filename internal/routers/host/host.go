@@ -98,7 +98,7 @@ func Store(ctx *macaron.Context, form HostForm) string {
 	}
 	if nameExist {
 // 		return json.CommonFailure("主机名已存在")
-		continue
+		nameExist = nameExist
 	}
 
 	hostModel.Name = strings.TrimSpace(form.Name)
